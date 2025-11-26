@@ -1,0 +1,1113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--====== Title ======-->
+    <title>Ks Data Solutions Limited</title>
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!--====== Fontawesome pro css ======-->
+    <link rel="stylesheet" href="assets/css/all.css">
+
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="assets/css/slick-menu.css">
+
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="services.css">
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="icon" type="image/png" href="images/KS EMBLEM.png">
+
+
+</head>
+
+<body>
+    <!--======  PRELOADER PART START ======-->
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object" id="object_one"></div>
+                <div class="object" id="object_two"></div>
+                <div class="object" id="object_three"></div>
+                <div class="object" id="object_four"></div>
+            </div>
+        </div>
+    </div>
+    <!--======  PRELOADER PART END ======-->
+
+    <!--======  OFFCANVAS-SEARCH PART START ======-->
+    <div class="offcanvas-search-area">
+        <form action="#">
+            <input type="text" placeholder="search">
+            <span class="close-bar"><i class="fas fa-times"></i></span>
+        </form>
+    </div>
+    <!--======  OFFCANVAS-SEARCH PART END ======-->
+
+    <!--======  HEADER PART START ======-->
+    <header>
+  <!--
+             <div class="top-header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="top-header-content">
+                                    <span><i class="fas fa-phone"></i><a href="tell:+260 9763617">+260 9763617</a></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="top-header-content">
+                                    <span><i class="fas fa-map-marker-alt"></i>Flat No 6 Off Burma Road <br> Aggrey Road, Kabwata Lusaka, Zambia</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="top-header-content">
+                                    <span><i class="far fa-clock"></i>Sun - Friday : 10 am - 08 pm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 text-right border">
+                        <div class="top-header-social-links">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    -->
+        <div class="bottom-header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/images/KS LOGO.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-10 text-right">
+                        <div class="mobile-menu-wrap"></div>
+                        <div class="header-search">
+                            <span class="search-btn"><i class="fa fa-search"></i></span>
+                        </div>
+                        <div class="main-menu">
+                            <nav>
+                                <ul id="mobile-menu"> 
+                                    <li class="current"><a href="#home">Home</a></li>
+                                    <li><a href="#About">About</a></li>
+                                    <li><a href="#Services">Services</a></li>
+                                    <li><a href="#portfolio">portfolio</a></li>
+                                    <li><a href="#team">CTO</a></li>
+                                    </li>
+                                    <li><a href="#Contact">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script>
+   window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  if (window.scrollY > 50) {
+    header.style.background = 'rgba(3, 13, 60, 0.9)';
+  } else {
+    header.style.background = 'rgba(3, 13, 60, 0.55)';
+  }
+});
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  if (window.scrollY > 50) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+});
+
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".main-menu ul li a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  const scrollY = window.pageYOffset;
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120; // offset for sticky header height
+    const sectionHeight = section.offsetHeight;
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href").includes(current)) {
+      link.classList.add("active");
+    }
+  });
+});
+
+
+    </script>
+    <!--======  HEADER PART END ======-->
+
+   <!--======  HERO PART START ======-->
+<!--======  HERO PART START ======-->
+<!--======  HERO PART START ======-->
+<section class="hero-area hero-carousel-active" id="home">
+
+  <!-- ===== CONSULTANCY ===== -->
+  <div class="single-hero-area hero-bg-1 bg_cover" data-scroll-area="true">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="hero-area-content">
+            <p class="hero-para">
+              Helping businesses navigate registrations, compliance, and strategic growth.
+            </p>
+            <h1 class="hero-heading">Consultancy</h1>
+
+            <!-- Dropdown menu -->
+            <div class="hero-area-menu">
+              <ul class="dropdown-services">
+                <li class="dropdown" id="consultancyDropdown">
+                  <a href="#" class="dropdown-toggle"><h2>Services</h2></a>
+                  <ul class="dropdown-list">
+                    <li><a href="https://wa.me/260976738617?text=I%20need%20help%20with%20PACRA%20Business%20Registration.">PACRA Business Registration</a></li>
+                    <li><a href="https://wa.me/260976738617?text=I%20need%20assistance%20with%20Annual%20Return%20Filing.">PACRA Annual Returns</a></li>
+                    <li><a href="https://wa.me/260976738617?text=Please%20assist%20me%20with%20ZRA%20T-PIN%20Registration.">ZRA T-PIN Registration</a></li>
+                    <li><a href="https://wa.me/260976738617?text=I%20want%20guidance%20on%20Tax%20Clearance%20Certificate%20application.">Tax Clearance Certificate</a></li>
+                    <li><a href="https://wa.me/260976738617?text=I%20want%20to%20apply%20for%20a%20Trading%20Licence.">Trading Licences</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scrolli">
+      <span><i class="fa fa-arrow-down"></i></span>
+    </div>
+  </div>
+
+  <!-- ===== ICT ===== -->
+  <div class="single-hero-area hero-bg-2 bg_cover" data-scroll-area="true">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="hero-area-content">
+            <p class="hero-para">
+              Building robust ICT solutions, from secure networks to web development.
+            </p>
+            <h1 class="hero-heading">ICT</h1>
+
+            <!-- Dropdown menu -->
+            <div class="hero-area-menu">
+              <ul class="dropdown-services">
+                <li class="dropdown" id="ictDropdown">
+                      <a href="#" class="dropdown-toggle"><h2>Services</h2></a>
+                  <ul class="dropdown-list">
+                    <li><a href="https://wa.me/260976738617?text=I%20want%20a%20quotation%20for%20Network%20Design%20(LAN/WLAN).">Network Design (LAN/WLAN)</a></li>
+                    <li><a href="https://wa.me/260976738617?text=I%20need%20assistance%20with%20Server%20Installation.">Server Installation</a></li>
+                    <li><a href="https://wa.me/260976738617?text=I%20want%20custom%20Web%20Development%20services.">Web Development</a></li>
+                    <li><a href="https://wa.me/260976738617?text=I%20want%20to%20register%20a%20Domain%20and%20Web%20Hosting.">Server Installation </a></li>
+                    <li><a href="https://wa.me/260976738617?text=I%20need%20a%20Computer%20Maintenance%20quotation.">Computer Maintenance</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scrolli">
+      <span><i class="fa fa-arrow-down"></i></span>
+    </div>
+  </div>
+
+  <!-- ===== SMART ENERGY ===== -->
+  <div class="single-hero-area hero-bg-3 bg_cover" data-scroll-area="true">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="hero-area-content">
+            <p class="hero-para">
+              Empowering homes and businesses with solar, sustainability, and innovation.
+            </p>
+            <h1 class="hero-heading">Smart Energy</h1>
+
+            <!-- Dropdown menu -->
+            <div class="hero-area-menu">
+              <ul class="dropdown-services">
+                <li class="dropdown" id="energyDropdown">
+                 <a href="#" class="dropdown-toggle"><h2>Services</h2></a>
+                  <ul class="dropdown-list">
+                    <li><a href="https://wa.me/260976738617?text=I%20need%20a%20quotation%20for%20Solar%20System%20Installation.">Solar System Installation</a></li>
+                    <li><a href="https://wa.me/260976738617?text=I'm%20interested%20in%20Solar%20Water%20Pump%20Systems.">Solar Water Pump Systems</a></li>
+                    <li><a href="https://wa.me/260976738617?text=I%20need%20a%20backup%20solution%20for%20my%20home%20or%20office.">Solar Lighting & Backup Systems</a></li>
+                    <li><a href="https://wa.me/260976738617?text=I%20want%20to%20schedule%20a%20Solar%20System%20Maintenance%20service.">Solar System Maintenance</a></li>
+                    <li><a href="https://wa.me/260976738617?text=Tell%20me%20more%20about%20Energy%20Auditing%20and%20Consultation.">Energy Auditing & Consultation</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scrolli">
+      <span><i class="fa fa-arrow-down"></i></span>
+    </div>
+  </div>
+  <div class="single-hero-area hero-bg-3 bg_cover" data-scroll-area="true">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="hero-area-content">
+          <p class="hero-para">
+            Delivering efficient supply chain, freight handling, and corporate logistics solutions across Zambia.
+          </p>
+          <h1 class="hero-heading">Logistics</h1>
+
+          <!-- Dropdown menu -->
+          <div class="hero-area-menu">
+            <ul class="dropdown-services">
+              <li class="dropdown" id="logisticsDropdown">
+                <a href="#" class="dropdown-toggle"><h2>Services</h2></a>
+                <ul class="dropdown-list">
+                  <li>
+                    <a href="https://wa.me/260976738617?text=Hello!%20I%20need%20a%20quotation%20for%20Parcel%20Delivery%20Service.">
+                      Parcel Delivery
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://wa.me/260976738617?text=Hi!%20I'd%20like%20to%20request%20a%20quote%20for%20Corporate%20Logistics.">
+                      Corporate Logistics
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://wa.me/260976738617?text=Hello!%20I%20am%20interested%20in%20Freight%20Transport%20Services.">
+                      Freight Transport
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://wa.me/260976738617?text=Hello!%20Please%20assist%20me%20with%20Supply%20Chain%20Management%20Solutions.">
+                      Supply Chain Management
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://wa.me/260976738617?text=Hello!%20I%20want%20details%20on%20Warehousing%20and%20Storage%20Services.">
+                      Warehousing & Storage
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scrolli">
+    <span><i class="fa fa-arrow-down"></i></span>
+  </div>
+</div>
+
+
+</section>
+<!--======  HERO PART END ======-->
+
+<!--======  HERO PART END ======-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdowns = document.querySelectorAll(".dropdown");
+
+  dropdowns.forEach(drop => {
+    const toggle = drop.querySelector(".dropdown-toggle");
+    toggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      // Close all others first
+      dropdowns.forEach(d => { if (d !== drop) d.classList.remove("open"); });
+      drop.classList.toggle("open");
+    });
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    dropdowns.forEach(drop => {
+      if (!drop.contains(e.target)) drop.classList.remove("open");
+    });
+  });
+});
+</script>
+
+
+    <!--======  SERVICE-CATEGORIES PART START ======-->
+    <section class="service-area service-categories pt-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="single-service-area">
+                        <span class="service-num">01</span>
+                    </div>
+                    <div class="service-icon">
+                    </div>
+                    <div class="service-content">
+                        <h4>Consultancy</h4>
+                        <p>Expert business and compliance consultancy services to guide your growth, from registrations and permits to risk management and strategy</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-service-area">
+                        <span class="service-num">02</span>
+                    </div>
+                    <div class="service-icon">
+                    </div>
+                    <div class="service-content">
+                        <h4>ICT</h4>
+                        <p>Innovative ICT solutions including network design, web development, systems integration, and reliable IT support.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-service-area">
+                        <span class="service-num">03</span>
+                    </div>
+                    <div class="service-icon">
+                    </div>
+                    <div class="service-content">
+                        <h4>Smart Energy</h4>
+                        <p>Clean, sustainable energy solutions such as solar systems, energy audits, and green building integration for homes and businesses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--======  SERVICE-CATEGORIES PART END ======-->
+
+    <!--======  ABOUT-US PART START ======-->
+  <section id="About" class="about-section fade-in">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="assets/images/about-us/1. TRANSPARENCY.png" alt="About KS Data Solutions">
+      </div>
+      <div class="about-content">
+        <h2>About Us</h2>
+        <div class="divider"></div>
+        <h4>Empowering Growth Through Innovation and Technology</h4>
+        <p><strong>KS Data Solutions Limited</strong> is a vibrant Zambian company led by young innovators providing integrated solutions in ICT, Business Consultancy, Smart Energy, and Logistics. We are driven by a passion for technology, efficiency, and sustainability helping businesses operate smarter and grow faster.</p>
+        <p>Our mission is to bridge the gap between technology and business growth through reliable, innovative, and affordable solutions that empower communities and strengthen Zambia’s economy.</p>
+      </div>
+    </div>
+  </section>
+    <!--======  ABOUT-US PART END ======-->
+
+    <!--======  SERVICE PART START ======-->
+   <section class="service-area service-bg pt-140 pb-140" id="Services">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-3 text-center pb-80">
+        <div class="section-title service-title">
+          <span><img src="assets/images/" alt=""></span>
+          <p class="section-para"><span></span>Our Services</p>
+          <h1>Empowering Businesses Through Smart, Innovative Solutions</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="row pb-30">
+      <div class="col-lg-6">
+        <div class="single-service-box">
+          <div class="single-service-icon-box">
+            <p>01</p>
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <div class="service-box-content">
+            <h3>Consultancy</h3>
+            <p>Navigate regulations and achieve sustainable growth with expert business and compliance support.</p>
+            <a href="consultancy.html" class="service-btn">Read More <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="single-service-box">
+          <div class="single-service-icon-box">
+            <p>02</p>
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <div class="service-box-content">
+            <h3>ICT Solutions</h3>
+            <p>Building robust ICT infrastructures from networking to web and software development solutions.</p>
+            <a href="ict.html" class="service-btn">Read More <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="single-service-box">
+          <div class="single-service-icon-box">
+            <p>03</p>
+            <i class="fas fa-solar-panel"></i>
+          </div>
+          <div class="service-box-content">
+            <h3>Smart Energy</h3>
+            <p>Leading in renewable energy through solar installations, smart systems, and sustainable solutions.</p>
+            <a href="smart-energy.html" class="service-btn">Read More <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="single-service-box">
+          <div class="single-service-icon-box">
+            <p>04</p>
+            <i class="fas fa-truck"></i>
+          </div>
+          <div class="service-box-content">
+            <h3>Logistics</h3>
+            <p>Delivering seamless and efficient logistics services that ensure reliability and on-time operations.</p>
+            <a href="logistics.html" class="service-btn">Read More <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!--======  ABOUT-US PART END ======-->
+
+    <!--======  PORTFOLIO PART START ======-->
+    <section class="portfolio-area pt-140 pb-140" id="portfolio">
+        <div class="container">
+            <div class="row pb-80">
+                <div class="col-lg-5">
+                    <div class="section-title portfolio-title">
+                        <h1>Our Recent Completed Projects, Take a Look </h1>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-7 text-right">
+                    <div class="portfolio-btn-area">
+                        <a href="contact.html" class="portfolio-btn-2">Let’s Talk <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="single-portfolio-item">
+                        <img src="assets/images/portfolio/1.jpg" alt="">
+                        <div class="portfolio-overlay-content">
+                            <h2></h2>
+                            <p>Consultancy for 50+ Businesses</p>
+                            <a href="assets/images/portfolio/1.jpg" class="portfolio-icon img-popup"><i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <div class="row">
+                        <div class="col-lg-6 pb-30 col-md-6">
+                            <div class="single-portfolio-item">
+                                <img src="assets/images/portfolio/2.jpg" alt="">
+                                <div class="portfolio-overlay-content">
+                                    <p>Designed a network and installed servers at Kablonga Boys Sec School </p>
+                                    <a href="assets/images/portfolio/2.jpg" class="portfolio-icon img-popup"><i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 pb-30 col-md-6">
+                            <div class="single-portfolio-item">
+                                <img src="assets/images/portfolio/3.jpg" alt="">
+                                <div class="portfolio-overlay-content">
+                                    <p>Installed 20+ Solar systems Across Lusaka</p>
+                                    <a href="assets/images/portfolio/3.jpg" class="portfolio-icon img-popup"><i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="single-portfolio-item">
+                                <img src="assets/images/portfolio/4.jpg" alt="">
+                                <div class="portfolio-overlay-content">
+                                    <p>Designed and developed 15+ Websites</p>
+                                    <a href="assets/images/portfolio/4.jpg" class="portfolio-icon img-popup"><i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="single-portfolio-item">
+                                <img src="assets/images/portfolio/5.jpg" alt="">
+                                <div class="portfolio-overlay-content">
+                                    <p>Company Registrations and Many More </p>
+                                    <a href="assets/images/portfolio/5.jpg" class="portfolio-icon img-popup"><i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--======  PORTFOLIO PART END ======-->
+
+    <!--======  CTA PART START ======-->
+    <section class="cta-area cta-bg pt-140 pb-140">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="cta-title">
+                        <span><img src="assets/images/cta-text.png" alt=""></span>
+                        <h1>Have Any 
+                            Creative Project in Mind?</h1>
+                        <p>KS Data Solutions provides cutting-edge data services, empowering organizations to achieve efficiency, accuracy, and growth</p>
+                        <a href="#Contact" class="btn cta-btn">meet with us <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--======  CTA PART END ======-->
+
+    <!--======  CTO PART START ======-->
+ <!--======  CTO SECTION START ======-->
+<section class="cto-section pt-140 pb-140" id="team">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-6">
+        <div class="section-title">
+          <h1>Meet Kapembwa</h1>
+          <div class="divider"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cto-card text-center">
+      <div class="cto-image">
+        <img src="assets/images/team/CTO.jpeg" alt="Mr Kapembwa – CTO" />
+      </div>
+      <div class="cto-message">
+        <h3>“At KS Data Solutions, innovation is not just our goal — it’s our culture.  
+        We strive to empower businesses through smart technology, sustainable energy,  
+        and strategic consultancy that transforms ideas into impactful realities.”</h3>
+        <p>— Mr Kapembwa, Chief Technology Officer</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--======  CTO SECTION END ======-->
+    <!--======  VIDEO PART START ======-->
+<!--====== OUR STORY (LOCAL VIDEO SECTION) ======-->
+<section class="video-area">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="video-bg" id="storyVideo">
+    <source src="assets/videos/our-story.mov" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay for effect -->
+  <div class="overlay"></div>
+
+  <!-- Play Button -->
+  <div class="video-icon-area">
+    <a href="#" class="video-icon" id="playVideo">
+      <i class="fa fa-play"></i>
+    </a>
+  </div>
+
+  <!-- Text Box -->
+  <div class="video-content glass-box">
+    <h1>Our Story</h1>
+  </div>
+</section>
+
+<!--script-->
+<script>
+  const video = document.getElementById('storyVideo');
+  const playBtn = document.getElementById('playVideo');
+
+  playBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (video.paused) {
+      video.play();
+      video.muted = false;
+      playBtn.style.display = 'none';
+    } else {
+      video.pause();
+      playBtn.style.display = 'flex';
+    }
+  });
+</script>
+
+    <!--======  VIDEO PART END ======-->
+
+   
+   <!--====== CORE VALUES SECTION START ======-->
+<section class="core-values-area">
+  <div class="container">
+    <div class="row pb-80 align-items-center">
+      <div class="col-lg-6">
+        <div class="section-title project-title">
+          <p class="section-para"><span></span>Our Core Values</p>
+          <h1>We Uphold Integrity, Innovation & Excellence</h1>
+        </div>
+      </div>
+      <div class="col-lg-6 text-right">
+        <a href="#Contact" class="btn counter-btn">
+          Get in Touch <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Core Value 1 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="core-card">
+          <div class="core-icon"><i class="fas fa-handshake"></i></div>
+          <h3>Integrity</h3>
+          <p>We act with honesty, transparency, and professionalism in every project we undertake.</p>
+        </div>
+      </div>
+
+      <!-- Core Value 2 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="core-card">
+          <div class="core-icon"><i class="fas fa-lightbulb"></i></div>
+          <h3>Innovation</h3>
+          <p>We continuously embrace modern technologies to deliver smarter business solutions.</p>
+        </div>
+      </div>
+
+      <!-- Core Value 3 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="core-card">
+          <div class="core-icon"><i class="fas fa-users-cog"></i></div>
+          <h3>Collaboration</h3>
+          <p>We work together with our clients to achieve meaningful, long-term success.</p>
+        </div>
+      </div>
+
+      <!-- Core Value 4 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="core-card">
+          <div class="core-icon"><i class="fas fa-award"></i></div>
+          <h3>Excellence</h3>
+          <p>We deliver quality-driven results that exceed expectations and set industry standards.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--====== CORE VALUES SECTION END ======-->
+
+    <!--======  CORE VALUES PART END ======-->
+
+    <!--======  CONTACT-WITH-FOOTER PART START ======-->
+  <section class="contact-section" id="Contact">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>Contact Us</h2>
+      <div class="divider"></div>
+      <p>Ready to elevate your business? Get in touch with KS Data Solutions today!</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Contact Form -->
+      <form class="contact-form scroll-fade" action="mailto:info@ksdatasolutions.com" method="POST" enctype="text/plain">
+        <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+        <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn contact-btn">
+          <i class="fa fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+
+      <!-- Contact Info -->
+      <div class="contact-info-card scroll-fade">
+        <h3>Get in Touch</h3>
+
+        <a href="tel:+260976738617" class="info-item">
+          <i class="fa fa-phone"></i> +260 976 738 617
+        </a>
+        <a href="mailto:ks.datasolutionltd@proton.me" class="info-item">
+          <i class="fa fa-envelope"></i> ksdatasolutionltd
+        </a>
+        <a href="https://www.google.com/maps/place/Lusaka,+Zambia" target="_blank" class="info-item">
+          <i class="fa fa-map-marker-alt"></i> Lusaka, Zambia
+        </a>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/260976738617" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-bottom-area">
+    <p>&copy; 2025 KS Data Solutions Ltd. All Rights Reserved.</p>
+  </footer>
+</section>
+
+<!-- ====== STYLES ====== -->
+<style>
+/* ====== CONTACT SECTION ====== */
+.contact-section {
+  background: url('assets/images/cont.jpg') center/cover no-repeat fixed;
+  padding: 100px 20px 60px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(24, 83, 154, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: -1;
+}
+
+.section-header h2 {
+  color: #fff;
+  font-size: 2.4em;
+  font-weight: 700;
+}
+
+.section-header .divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4CAD72 0%, #ffffff 100%);
+  margin: 10px auto 15px auto;
+  border-radius: 3px;
+}
+
+.section-header p {
+  color: #f2f2f2;
+  font-size: 1.05em;
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+}
+
+/* ===== GRID LAYOUT ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===== CARDS ===== */
+.contact-form,
+.contact-info-card {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 35px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.6s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 450px;
+}
+
+/* Scroll animation */
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.scroll-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== FORM ===== */
+.contact-form:hover,
+.contact-info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.35);
+  color: #18539A;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+  color: #18539A;
+}
+
+.form-control:focus {
+  border-color: #4CAD72;
+  background: rgba(255, 255, 255, 0.45);
+  outline: none;
+}
+
+.contact-btn {
+  background: linear-gradient(90deg, #18539A 0%, #4CAD72 100%);
+  color: #fff;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background: linear-gradient(90deg, #4CAD72 0%, #18539A 100%);
+  transform: translateY(-2px);
+}
+
+/* ===== INFO CARD ===== */
+.contact-info-card {
+  color: #fff;
+  text-align: left;
+}
+
+.contact-info-card h3 {
+  font-size: 1.6em;
+  color: #fff;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Info Links */
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.info-item i {
+  color: #4CAD72;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effects */
+.info-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(5px);
+  color: #4CAD72;
+}
+
+.info-item:hover i {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* ===== SOCIAL ICONS ===== */
+.social-icons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 18px;
+  margin: 0 8px;
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #4CAD72;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ===== FOOTER ===== */
+.footer-bottom-area {
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px 0;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+.footer-bottom-area p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<!-- ====== SCROLL ANIMATION SCRIPT ====== -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".scroll-fade");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => observer.observe(el));
+});
+</script>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <!--======  CONTACT-WITH-FOOTER PART END ======-->
+
+    <!--======  SCROLL-TO-TOP PART START ======-->
+    <div class="scroll-to-top">
+        <span id="return-to-top"><i class="fa fa-arrow-up"></i></span>
+    </div>
+    <!--======  SCROLL-TO-TOP PART END ======-->
+
+
+ <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+  <style>
+    /* ===== Customize Dialogflow Messenger ===== */
+    df-messenger {
+      --df-messenger-bot-message: #4CAD72;       /* bot bubble */
+      --df-messenger-user-message: #18539A;     /* user bubble */
+      --df-messenger-button-titlebar-color: #18539A; /* top bar background */
+      --df-messenger-font-color: #ffffff;       /* bot text */
+      --df-messenger-send-icon: #ffffff;        /* send icon */
+      --df-messenger-input-box-color: #f0f0f0;  /* input background */
+      --df-messenger-input-font-color: #000000; /* input text */
+      --df-messenger-titlebar-height: 45px;     /* smaller top bar */
+    }
+
+    /* Header title and logo adjustments */
+    df-messenger .df-messenger-title {
+      font-size: 16px !important;
+      line-height: 45px !important;
+      padding-left: 10px;
+    }
+
+    /* Reduce extra space at the top */
+    df-messenger .df-messenger-chat {
+      margin-top: 0px !important;
+    }
+
+    /* Optional: smaller shadow for cleaner look */
+    df-messenger .df-messenger-wrapper {
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+  </style>
+
+  <!-- ===== Dialogflow Messenger ===== -->
+  <df-messenger
+    intent="WELCOME"
+    chat-title="ksBot"
+    agent-id="42f32bb4-22a2-4cfd-a00f-4d9ff5b6a00a"
+    language-code="en"
+    chat-icon="assets/images/boticon-01.png">
+  </df-messenger>
+
+
+   
+    <!--====== jquery js ======-->
+    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+
+    <!--====== Slick js ======-->
+    <script src="assets/js/slick.min.js"></script>
+
+    <!--====== Slick js ======-->
+    <script src="assets/js/slick-menu.min.js"></script>
+
+    <!--====== counterup js ======-->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+
+    <!--====== Magnific Popup js ======-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    
+    <!--====== onepage-nav Popup js ======-->
+    <script src="assets/js/jquery.nav.js"></script>
+
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
